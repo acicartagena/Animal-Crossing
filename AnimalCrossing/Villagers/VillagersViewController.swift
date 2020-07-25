@@ -16,6 +16,7 @@ class VillagersViewController: UIViewController {
 
     private lazy var dataSource = DataSource(collectionView: collectionView) { (collectionView, indexPath, villager)  in
         let cell: VillagerCell = collectionView.dequeCell(for: indexPath)
+        cell.configure(with: villager)
         return cell
     }
 
@@ -35,12 +36,11 @@ class VillagersViewController: UIViewController {
         dataSource.apply(viewModel.snapshot)
     }
 
-
-
     func setupUI() {
         navigationItem.title = viewModel.title
 
         view.addSubviewsUsingAutoLayout(collectionView)
+
         collectionView.leadingAnchor.constraint(to: view.leadingAnchor)
         collectionView.trailingAnchor.constraint(to: view.trailingAnchor)
         collectionView.topAnchor.constraint(to: view.topAnchor)
@@ -51,10 +51,9 @@ class VillagersViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .estimated(300.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: .fixed(2.0), top: .fixed(2.0), trailing: .fixed(2.0), bottom: .fixed(2.0))
 
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(300.0))
+                                               heightDimension: .fractionalHeight(1.0))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
 
