@@ -18,6 +18,9 @@
 		35B33A5D24CC56490086D34F /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A5C24CC56490086D34F /* CollectionViewExtensions.swift */; };
 		35B33A6024CC572B0086D34F /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A5F24CC572B0086D34F /* AppFlowCoordinator.swift */; };
 		35B33A6224CC57920086D34F /* VillagersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A6124CC57920086D34F /* VillagersViewModel.swift */; };
+		35B33A6424CC58E40086D34F /* Villager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A6324CC58E40086D34F /* Villager.swift */; };
+		35B33A6724CC5CA50086D34F /* VillagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A6624CC5CA50086D34F /* VillagerCell.swift */; };
+		35B33A6924CC5DA80086D34F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A6824CC5DA80086D34F /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,10 @@
 		35B33A5C24CC56490086D34F /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensions.swift; sourceTree = "<group>"; };
 		35B33A5F24CC572B0086D34F /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		35B33A6124CC57920086D34F /* VillagersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersViewModel.swift; sourceTree = "<group>"; };
+		35B33A6324CC58E40086D34F /* Villager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Villager.swift; sourceTree = "<group>"; };
+		35B33A6624CC5CA50086D34F /* VillagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagerCell.swift; sourceTree = "<group>"; };
+		35B33A6824CC5DA80086D34F /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		35B33A6B24CC5E830086D34F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +76,7 @@
 		35B33A2924CC54CE0086D34F = {
 			isa = PBXGroup;
 			children = (
+				35B33A6B24CC5E830086D34F /* README.md */,
 				35B33A3424CC54CE0086D34F /* AnimalCrossing */,
 				35B33A4B24CC54CF0086D34F /* AnimalCrossingTests */,
 				35B33A3324CC54CE0086D34F /* Products */,
@@ -90,6 +98,8 @@
 				35B33A3524CC54CE0086D34F /* AppDelegate.swift */,
 				35B33A3724CC54CE0086D34F /* SceneDelegate.swift */,
 				35B33A5F24CC572B0086D34F /* AppFlowCoordinator.swift */,
+				35B33A6A24CC5DAB0086D34F /* Components */,
+				35B33A6524CC5B6B0086D34F /* Models */,
 				35B33A5E24CC57150086D34F /* Villagers */,
 				35B33A5724CC561A0086D34F /* Extensions */,
 				35B33A3E24CC54CF0086D34F /* Assets.xcassets */,
@@ -122,9 +132,26 @@
 			isa = PBXGroup;
 			children = (
 				35B33A6124CC57920086D34F /* VillagersViewModel.swift */,
+				35B33A6624CC5CA50086D34F /* VillagerCell.swift */,
 				35B33A3924CC54CE0086D34F /* VillagersViewController.swift */,
 			);
 			path = Villagers;
+			sourceTree = "<group>";
+		};
+		35B33A6524CC5B6B0086D34F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35B33A6324CC58E40086D34F /* Villager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		35B33A6A24CC5DAB0086D34F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				35B33A6824CC5DA80086D34F /* Label.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +258,13 @@
 				35B33A5D24CC56490086D34F /* CollectionViewExtensions.swift in Sources */,
 				35B33A3A24CC54CE0086D34F /* VillagersViewController.swift in Sources */,
 				35B33A5B24CC56380086D34F /* ReuseIdentifiable.swift in Sources */,
+				35B33A6924CC5DA80086D34F /* Label.swift in Sources */,
 				35B33A3624CC54CE0086D34F /* AppDelegate.swift in Sources */,
 				35B33A5924CC56270086D34F /* ViewExtensions.swift in Sources */,
 				35B33A3824CC54CE0086D34F /* SceneDelegate.swift in Sources */,
 				35B33A6024CC572B0086D34F /* AppFlowCoordinator.swift in Sources */,
+				35B33A6424CC58E40086D34F /* Villager.swift in Sources */,
+				35B33A6724CC5CA50086D34F /* VillagerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
