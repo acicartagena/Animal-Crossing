@@ -30,8 +30,12 @@ class VillagersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        setupUI()
+        dataSource.apply(viewModel.snapshot)
     }
+
+
 
     func setupUI() {
         navigationItem.title = viewModel.title
