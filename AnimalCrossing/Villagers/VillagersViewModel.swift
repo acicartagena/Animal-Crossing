@@ -17,6 +17,6 @@ class VillagersViewModel {
     init() {
         snapshot = Snapshot()
         snapshot.appendSections([.villagers])
-        snapshot.appendItems([Villager.stu])
+        snapshot.appendItems([Villager.stu, Villager.marshall])
     }
 }
