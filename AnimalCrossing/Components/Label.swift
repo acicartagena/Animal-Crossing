@@ -10,6 +10,7 @@ class Label: UILabel {
         font = UIFont.preferredFont(forTextStyle: textStyle)
         adjustsFontForContentSizeCategory = true
         numberOfLines = 0
+        textColor = .systemGray
     }
 
     required init?(coder: NSCoder) {

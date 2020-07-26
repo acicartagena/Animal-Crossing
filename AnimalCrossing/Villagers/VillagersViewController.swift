@@ -9,7 +9,7 @@ class VillagersViewController: UIViewController {
 
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemGreen
         collectionView.register(VillagerCell.self)
         return collectionView
     }()

@@ -16,7 +16,7 @@ class VillagerCell: UICollectionViewCell {
         let view = UIView()
         view.clipsToBounds = true
         view.layer.cornerRadius = 16.0
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemYellow
         return view
     }()
 
