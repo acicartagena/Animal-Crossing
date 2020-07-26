@@ -23,6 +23,7 @@ class VillagersViewController: UIViewController {
     init(viewModel: VillagersViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -34,6 +35,12 @@ class VillagersViewController: UIViewController {
 
         setupUI()
         dataSource.apply(viewModel.snapshot)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        viewModel.start()
     }
 
     func setupUI() {
@@ -58,5 +65,11 @@ class VillagersViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+}
+
+extension VillagersViewController: VillagersViewModelDelegate {
+    func reload(snapshot: VillagersViewModel.Snapshot) {
+        dataSource.apply(snapshot)
     }
 }

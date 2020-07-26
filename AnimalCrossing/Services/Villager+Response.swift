@@ -12,7 +12,7 @@ extension Villager {
         species = Species(response: response.species)
         gender = Gender(response: response.gender)
         catchPhrase = response.catchPhrase
-        imageURL = URL(string: response.imageURI)
+        imageURL =  URL(string: response.imageURI) // response.imageURI.map { URL(string: $0) ?? nil }
     }
 }
 

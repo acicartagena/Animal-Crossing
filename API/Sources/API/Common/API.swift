@@ -12,7 +12,7 @@ public class API {
 
     private lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+//        decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }()
 
@@ -53,10 +53,12 @@ public class API {
                     let decoded = try self.decoder.decode(T.self, from: data)
                     completion(.success(decoded))
                 } catch {
+                    print(error)
                     completion(.failure(.decoding(error)))
                     return
                 }
             case let .failure(error):
+                print(error)
                 completion(.failure(error))
             }
         }

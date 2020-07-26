@@ -75,7 +75,7 @@ public struct VillagerResponse: Decodable {
     public let species: Species
     public let catchPhrase: String
     public let imageURI: String
-    public let iconURI: String
+    public let iconURI: String?
     public let birthday: String //todo: make date later
 
     enum CodingKeys: String, CodingKey {
