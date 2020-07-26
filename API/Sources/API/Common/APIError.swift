@@ -4,10 +4,8 @@ import Foundation
 
 public enum APIError: Error, LocalizedError {
     case network(Error)
-    case noData
     case decoding(Error)
     case invalidURL(String)
-    case other(Error)
 
     public var errorDescription: String? {
         switch self {
