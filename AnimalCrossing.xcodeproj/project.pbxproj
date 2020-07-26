@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3513715224CD2B0D00F14145 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 3513715124CD2B0D00F14145 /* API */; };
+		3513715424CD362200F14145 /* VillagersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3513715324CD362200F14145 /* VillagersService.swift */; };
+		3513715724CD365B00F14145 /* AnimalCrossingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3513715624CD365B00F14145 /* AnimalCrossingError.swift */; };
+		3513715924CD405900F14145 /* Villager+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3513715824CD405900F14145 /* Villager+Response.swift */; };
 		35B33A3624CC54CE0086D34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A3524CC54CE0086D34F /* AppDelegate.swift */; };
 		35B33A3824CC54CE0086D34F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A3724CC54CE0086D34F /* SceneDelegate.swift */; };
 		35B33A3A24CC54CE0086D34F /* VillagersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A3924CC54CE0086D34F /* VillagersViewController.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		3513714F24CD2AAA00F14145 /* API */ = {isa = PBXFileReference; lastKnownFileType = text; path = API; sourceTree = SOURCE_ROOT; };
+		3513715324CD362200F14145 /* VillagersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersService.swift; sourceTree = "<group>"; };
+		3513715624CD365B00F14145 /* AnimalCrossingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCrossingError.swift; sourceTree = "<group>"; };
+		3513715824CD405900F14145 /* Villager+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Villager+Response.swift"; sourceTree = "<group>"; };
 		35B33A3224CC54CE0086D34F /* AnimalCrossing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B33A3524CC54CE0086D34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35B33A3724CC54CE0086D34F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +93,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3513715524CD362800F14145 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3513715624CD365B00F14145 /* AnimalCrossingError.swift */,
+				3513715824CD405900F14145 /* Villager+Response.swift */,
+				3513715324CD362200F14145 /* VillagersService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		35B33A2924CC54CE0086D34F = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +133,7 @@
 				35B33A6A24CC5DAB0086D34F /* Components */,
 				35B33A5724CC561A0086D34F /* Extensions */,
 				35B33A6524CC5B6B0086D34F /* Models */,
+				3513715524CD362800F14145 /* Services */,
 				35B33A5E24CC57150086D34F /* Villagers */,
 				35B33A3E24CC54CF0086D34F /* Assets.xcassets */,
 				35B33A4024CC54CF0086D34F /* LaunchScreen.storyboard */,
@@ -281,10 +298,13 @@
 				35B33A6224CC57920086D34F /* VillagersViewModel.swift in Sources */,
 				35B33A5D24CC56490086D34F /* CollectionViewExtensions.swift in Sources */,
 				35B33A7024CC63340086D34F /* ImageViewExtensions.swift in Sources */,
+				3513715924CD405900F14145 /* Villager+Response.swift in Sources */,
 				35B33A3A24CC54CE0086D34F /* VillagersViewController.swift in Sources */,
 				35B33A5B24CC56380086D34F /* ReuseIdentifiable.swift in Sources */,
 				35B33A6924CC5DA80086D34F /* Label.swift in Sources */,
+				3513715724CD365B00F14145 /* AnimalCrossingError.swift in Sources */,
 				35B33A3624CC54CE0086D34F /* AppDelegate.swift in Sources */,
+				3513715424CD362200F14145 /* VillagersService.swift in Sources */,
 				35B33A5924CC56270086D34F /* ViewExtensions.swift in Sources */,
 				35B33A3824CC54CE0086D34F /* SceneDelegate.swift in Sources */,
 				35B33A6024CC572B0086D34F /* AppFlowCoordinator.swift in Sources */,

@@ -19,4 +19,8 @@ class VillagersViewModel {
         snapshot.appendSections([.villagers])
         snapshot.appendItems([Villager.stu, Villager.marshall])
     }
+
+    func start() {
+
+    }
 }
