@@ -9,11 +9,9 @@ public enum APIError: Error, LocalizedError {
 
     public var errorDescription: String? {
         switch self {
-        case .noData: return "No data"
         case let .network(error): return "Network: \(error.localizedDescription)"
         case let .decoding(error): return "Decoding: \(error.localizedDescription)"
         case let .invalidURL(url): return "Invalid URL: \(url)"
-        case let .other(error): return "Other: \(error.localizedDescription)"
         }
     }
 }
