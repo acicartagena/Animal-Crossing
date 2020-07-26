@@ -4,13 +4,13 @@ import UIKit
 
 class Label: UILabel {
 
-    init(textStyle: UIFont.TextStyle = .body) {
+    init(textStyle: UIFont.TextStyle = .body, textColor: UIColor = .systemGray) {
         super.init(frame: .zero)
 
         font = UIFont.preferredFont(forTextStyle: textStyle)
         adjustsFontForContentSizeCategory = true
         numberOfLines = 0
-        textColor = .systemGray
+        self.textColor = textColor
     }
 
     required init?(coder: NSCoder) {
