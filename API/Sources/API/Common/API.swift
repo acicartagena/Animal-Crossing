@@ -16,7 +16,7 @@ public class API {
         return decoder
     }()
 
-    public func post<T: Decodable>(url: URL, body: Data? = nil, completion: @escaping (Result<T, APIError>) -> Void) {
+    func post<T: Decodable>(url: URL, body: Data? = nil, completion: @escaping (Result<T, APIError>) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.post.rawValue
         request.httpBody = body
@@ -39,7 +39,7 @@ public class API {
         }
     }
 
-    public func get<T: Decodable>(url: URL, body: Data? = nil, completion: @escaping (Result<T, APIError>) -> Void) {
+    func get<T: Decodable>(url: URL, body: Data? = nil, completion: @escaping (Result<T, APIError>) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.get.rawValue
         request.httpBody = body

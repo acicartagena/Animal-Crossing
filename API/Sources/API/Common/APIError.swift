@@ -2,8 +2,9 @@
 
 import Foundation
 
-enum APIError: Error {
+public enum APIError: Error {
     case network(Error)
     case noData
     case decoding(Error)
+    case invalidURL(String)
 }
