@@ -12,6 +12,14 @@ extension CGFloat {
 
 class VillagerCell: UICollectionViewCell {
 
+    private let view: UIView = {
+        let view = UIView()
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 16.0
+        view.backgroundColor = .lightGray
+        return view
+    }()
+
     private let nameLabel = Label()
     private let personalityLabel = Label()
     private let birthdayLabel = Label()
@@ -36,30 +44,31 @@ class VillagerCell: UICollectionViewCell {
     }
 
     func setupUI() {
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, descriptionLabel])
-        stackView.axis = .vertical
-        stackView.spacing = CGFloat.interItem
+        contentView.addSubviewsUsingAutoLayout(view)
+        view.leadingAnchor.constraint(to: contentView.leadingAnchor, with: CGFloat.margin)
+        view.topAnchor.constraint(to: contentView.topAnchor, with: CGFloat.margin/2)
+        view.trailingAnchor.constraint(to: contentView.trailingAnchor, with: CGFloat.inverseMargin)
+        view.bottomAnchor.constraint(to: contentView.bottomAnchor, with: CGFloat.inverseMargin/2)
 
-        contentView.addSubviewsUsingAutoLayout(imageView, stackView)
-
-        imageView.leadingAnchor.constraint(to: contentView.leadingAnchor, with: CGFloat.margin)
-        imageView.topAnchor.constraint(to: contentView.topAnchor, with: CGFloat.margin)
-        imageView.bottomAnchor.constraint(.lessThanOrEqual, to: contentView.bottomAnchor, with: CGFloat.inverseMargin)
-        imageView.bottomAnchor.constraint(to: contentView.bottomAnchor, with: CGFloat.inverseMargin, priority: .defaultHigh)
+        view.addSubviewsUsingAutoLayout(imageView)
+        imageView.leadingAnchor.constraint(to: view.leadingAnchor, with: CGFloat.margin)
+        imageView.topAnchor.constraint(to: view.topAnchor, with: CGFloat.margin)
+        imageView.bottomAnchor.constraint(.lessThanOrEqual, to: view.bottomAnchor, with: CGFloat.inverseMargin)
+        imageView.bottomAnchor.constraint(to: view.bottomAnchor, with: CGFloat.inverseMargin, priority: .defaultHigh)
         imageView.widthAnchor.constraint(with: 100.0)
         imageView.heightAnchor.constraint(with: 100.0)
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 50.0
 
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, descriptionLabel])
+        stackView.axis = .vertical
+        stackView.spacing = CGFloat.interItem
+
+        view.addSubviewsUsingAutoLayout(stackView)
         stackView.leadingAnchor.constraint(to: imageView.trailingAnchor, with: CGFloat.interItem)
         stackView.topAnchor.constraint(to: imageView.topAnchor)
-        stackView.trailingAnchor.constraint(to: contentView.trailingAnchor, with: CGFloat.inverseMargin)
-        stackView.bottomAnchor.constraint(.lessThanOrEqual, to: contentView.bottomAnchor, with: CGFloat.inverseMargin)
-
-        contentView.clipsToBounds = true
-        contentView.layer.cornerRadius = 16.0
-
-        contentView.backgroundColor = .lightGray
+        stackView.trailingAnchor.constraint(.lessThanOrEqual, to: view.trailingAnchor, with: CGFloat.inverseMargin)
+        stackView.bottomAnchor.constraint(.lessThanOrEqual, to: view.bottomAnchor, with: CGFloat.inverseMargin)
     }
 
     func configure(with villager: Villager) {

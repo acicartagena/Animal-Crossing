@@ -48,14 +48,10 @@ class VillagersViewController: UIViewController {
     }
 
     func makeCollectionViewLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .estimated(200.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: CGFloat.margin, bottom: 0, trailing: CGFloat.margin)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(300.0))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                              heightDimension: .estimated(100.0))
+        let item = NSCollectionLayoutItem(layoutSize: size)
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: size,
                                                        subitems: [item])
         group.interItemSpacing = .fixed(CGFloat.margin)
 
