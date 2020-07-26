@@ -3,7 +3,7 @@
 import Foundation
 import Combine
 
-public class VillagersAPI: API {
+public class AnimalCrossingAPI: API {
 
     public override init() {
         super.init()
