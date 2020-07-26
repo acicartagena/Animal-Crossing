@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3513715224CD2B0D00F14145 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 3513715124CD2B0D00F14145 /* API */; };
 		35B33A3624CC54CE0086D34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A3524CC54CE0086D34F /* AppDelegate.swift */; };
 		35B33A3824CC54CE0086D34F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A3724CC54CE0086D34F /* SceneDelegate.swift */; };
 		35B33A3A24CC54CE0086D34F /* VillagersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A3924CC54CE0086D34F /* VillagersViewController.swift */; };
@@ -65,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35B33A6E24CC63260086D34F /* Kingfisher in Frameworks */,
+				3513715224CD2B0D00F14145 /* API in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3513715024CD2B0C00F14145 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		35B33A2924CC54CE0086D34F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +94,7 @@
 				35B33A3424CC54CE0086D34F /* AnimalCrossing */,
 				35B33A4B24CC54CF0086D34F /* AnimalCrossingTests */,
 				35B33A3324CC54CE0086D34F /* Products */,
+				3513715024CD2B0C00F14145 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +189,7 @@
 			name = AnimalCrossing;
 			packageProductDependencies = (
 				35B33A6D24CC63260086D34F /* Kingfisher */,
+				3513715124CD2B0D00F14145 /* API */,
 			);
 			productName = AnimalCrossing;
 			productReference = 35B33A3224CC54CE0086D34F /* AnimalCrossing.app */;
@@ -550,6 +561,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3513715124CD2B0D00F14145 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
+		};
 		35B33A6D24CC63260086D34F /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 35B33A6C24CC63260086D34F /* XCRemoteSwiftPackageReference "Kingfisher" */;

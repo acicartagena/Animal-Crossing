@@ -1,3 +1,3 @@
 # API
 
-A description of this package.
+Internal API library can be split later into a different framework
