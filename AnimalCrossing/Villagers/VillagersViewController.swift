@@ -1,11 +1,13 @@
 // Copyright © 2020 ACartagena. All rights reserved.
 
 import UIKit
+import Combine
 
 class VillagersViewController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<VillagersViewModel.Section, Villager>
 
     private let viewModel: VillagersViewModel
+    private var subscriptions = Set<AnyCancellable>()
 
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
@@ -23,7 +25,6 @@ class VillagersViewController: UIViewController {
     init(viewModel: VillagersViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        self.viewModel.delegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -34,7 +35,7 @@ class VillagersViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
-        dataSource.apply(viewModel.snapshot)
+        setupBindings()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -66,10 +67,10 @@ class VillagersViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-}
 
-extension VillagersViewController: VillagersViewModelDelegate {
-    func reload(snapshot: VillagersViewModel.Snapshot) {
-        dataSource.apply(snapshot)
+    func setupBindings() {
+        viewModel.snapshots.sink { [weak self] snapshot in
+            self?.dataSource.apply(snapshot)
+        }.store(in: &subscriptions)
     }
 }

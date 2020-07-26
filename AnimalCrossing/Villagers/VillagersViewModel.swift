@@ -15,19 +15,23 @@ class VillagersViewModel {
         case villagers
     }
 
-    var snapshot: Snapshot
-    weak var delegate: VillagersViewModelDelegate?
-
     let title = NSLocalizedString("Villagers", comment: "")
+    private(set) lazy var snapshots = snapshotSubject.eraseToAnyPublisher()
+
     private let actions: VillagersActions
 
-    private var subscribers = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
+    private let snapshotSubject: CurrentValueSubject<Snapshot, Never>
+
 
     init(actions: VillagersActions = VillagersService()) {
         self.actions = actions
-        snapshot = Snapshot()
-        snapshot.appendSections([.villagers])
-        snapshot.appendItems([Villager.stu, Villager.marshall])
+
+        var initialSnapshot = Snapshot()
+        initialSnapshot.appendSections([.villagers])
+        initialSnapshot.appendItems([Villager.stu, Villager.marshall])
+
+        snapshotSubject = CurrentValueSubject<Snapshot, Never>(initialSnapshot)
     }
 
     func start() {
@@ -41,11 +45,16 @@ class VillagersViewModel {
                 case .finished: break
                 }
             }) { (villagers) in
-                var snapshot = Snapshot()
-                snapshot.appendSections([.villagers])
-                snapshot.appendItems(villagers)
-                self.delegate?.reload(snapshot: snapshot)
+                let snapshot = self.snapshot(for: villagers)
+                self.snapshotSubject.send(snapshot)
             }
-            .store(in: &subscribers)
+            .store(in: &subscriptions)
+    }
+
+    private func snapshot(for villagers: [Villager]) -> Snapshot {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.villagers])
+        snapshot.appendItems(villagers)
+        return snapshot
     }
 }

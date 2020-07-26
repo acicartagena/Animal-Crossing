@@ -10,8 +10,8 @@ protocol VillagersActions {
 
 final class VillagersService: VillagersActions {
 
-    private let api: VillagersAPI
-    init(api: VillagersAPI = VillagersAPI()) {
+    private let api: AnimalCrossingAPI
+    init(api: AnimalCrossingAPI = AnimalCrossingAPI()) {
         self.api = api
     }
 
