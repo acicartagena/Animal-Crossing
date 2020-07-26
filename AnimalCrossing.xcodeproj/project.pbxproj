@@ -27,6 +27,7 @@
 		35B33A6924CC5DA80086D34F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A6824CC5DA80086D34F /* Label.swift */; };
 		35B33A6E24CC63260086D34F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 35B33A6D24CC63260086D34F /* Kingfisher */; };
 		35B33A7024CC63340086D34F /* ImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B33A6F24CC63340086D34F /* ImageViewExtensions.swift */; };
+		35EDADCB24CD7E9E00857D69 /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EDADCA24CD7E9E00857D69 /* CGFloat+Spacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		35B33A6824CC5DA80086D34F /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		35B33A6B24CC5E830086D34F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		35B33A6F24CC63340086D34F /* ImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtensions.swift; sourceTree = "<group>"; };
+		35EDADCA24CD7E9E00857D69 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				35B33A5A24CC56380086D34F /* ReuseIdentifiable.swift */,
 				35B33A5C24CC56490086D34F /* CollectionViewExtensions.swift */,
 				35B33A6F24CC63340086D34F /* ImageViewExtensions.swift */,
+				35EDADCA24CD7E9E00857D69 /* CGFloat+Spacing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				3513715924CD405900F14145 /* Villager+Response.swift in Sources */,
 				35B33A3A24CC54CE0086D34F /* VillagersViewController.swift in Sources */,
 				35B33A5B24CC56380086D34F /* ReuseIdentifiable.swift in Sources */,
+				35EDADCB24CD7E9E00857D69 /* CGFloat+Spacing.swift in Sources */,
 				35B33A6924CC5DA80086D34F /* Label.swift in Sources */,
 				3513715724CD365B00F14145 /* AnimalCrossingError.swift in Sources */,
 				35B33A3624CC54CE0086D34F /* AppDelegate.swift in Sources */,
