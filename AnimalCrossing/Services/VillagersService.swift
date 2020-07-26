@@ -2,9 +2,10 @@
 
 import Foundation
 import API
+import Combine
 
 protocol VillagersActions {
-    func villagers(completion: @escaping(Result<[Villager], AnimalCrossingError>) -> Void)
+    func villagers() -> AnyPublisher<[Villager], AnimalCrossingError>
 }
 
 final class VillagersService: VillagersActions {
@@ -14,15 +15,12 @@ final class VillagersService: VillagersActions {
         self.api = api
     }
 
-    func villagers(completion: @escaping(Result<[Villager], AnimalCrossingError>) -> Void) {
-        api.villagers { result in
-            switch result {
-            case .success(let response):
-                let villagers = response.values.map { Villager(response: $0) }
-                completion(.success(villagers))
-            case .failure(let error):
-                completion(.failure(.api(error)))
+    func villagers() -> AnyPublisher<[Villager], AnimalCrossingError> {
+        return api.villagers()
+            .map { (response) -> [Villager] in
+                return response.values.map { Villager(response: $0) }
             }
-        }
+            .mapError { return AnimalCrossingError.api($0) }
+            .eraseToAnyPublisher()
     }
 }

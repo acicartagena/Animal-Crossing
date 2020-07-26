@@ -1,6 +1,7 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
 import Foundation
+import Combine
 
 public class VillagersAPI: API {
 
@@ -8,10 +9,14 @@ public class VillagersAPI: API {
         super.init()
     }
 
-    public func villagers(completion: @escaping (Result<VillagersResponse, APIError>) -> Void) {
+    @available(iOS 13.0, *)
+    public func villagers() -> AnyPublisher<VillagersResponse, APIError> {
         let urlString = "https://acnhapi.com/v1/villagers/"
-        guard let url = URL(string: urlString) else { return completion(.failure(.invalidURL(urlString))) }
+        guard let url = URL(string: urlString) else {
+            return Fail(error: APIError.invalidURL(urlString))
+                .eraseToAnyPublisher()
+        }
 
-        get(url: url, completion: completion)
+        return get(url: url)
     }
 }
