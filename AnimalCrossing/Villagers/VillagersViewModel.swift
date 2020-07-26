@@ -2,6 +2,7 @@
 
 import Foundation
 import UIKit // only for snapshot
+import Combine
 
 protocol VillagersViewModelDelegate: AnyObject {
     func reload(snapshot: VillagersViewModel.Snapshot)
@@ -20,6 +21,8 @@ class VillagersViewModel {
     let title = NSLocalizedString("Villagers", comment: "")
     private let actions: VillagersActions
 
+    private var subscribers = Set<AnyCancellable>()
+
     init(actions: VillagersActions = VillagersService()) {
         self.actions = actions
         snapshot = Snapshot()
@@ -29,19 +32,20 @@ class VillagersViewModel {
 
     func start() {
         // todo: add loading
-        actions.villagers { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let villagers):
-                print(villagers)
+        actions.villagers()
+            .sink(receiveCompletion: { (completion) in
+                switch completion {
+                case .failure(let error):
+                    // todo: add error display
+                    print("error: \(error.localizedDescription)")
+                case .finished: break
+                }
+            }) { (villagers) in
                 var snapshot = Snapshot()
                 snapshot.appendSections([.villagers])
                 snapshot.appendItems(villagers)
                 self.delegate?.reload(snapshot: snapshot)
-            case .failure(let error):
-                // todo: add error display
-                print("error: \(error.localizedDescription)")
             }
-        }
+            .store(in: &subscribers)
     }
 }
