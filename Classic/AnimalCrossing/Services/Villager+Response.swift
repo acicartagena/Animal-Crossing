@@ -1,7 +1,7 @@
 // Copyright © 2020 ACartagena. All rights reserved.
 
 import Foundation
-import API
+import AnimalCrossingAPI
 
 extension Villager {
     init(response: VillagerResponse) {

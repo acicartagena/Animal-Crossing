@@ -5,6 +5,9 @@ MVVM-C app using UIKit and
 - UICollectionViewCompositionalLayout
 - UICollectionViewDiffableDataSource
 
-## AnimalCrossingSwiftUI
+## SwiftUI
 SwiftUI app
+
+## AnimalCrossingAPI
+Shared API for both Classic And SwiftUI
 
