@@ -11,4 +11,6 @@
 ## API
 - uses http://acnhapi.com/ 
 
+![screenshot](https://raw.githubusercontent.com/acicartagena/Animal-Crossing/main/Classic/screenshot.png)
+
 
