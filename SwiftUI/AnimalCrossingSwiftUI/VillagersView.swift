@@ -19,11 +19,12 @@ struct VillagersView: View {
                         .progressViewStyle(CircularProgressViewStyle())
                         .padding()
                 }
-                LazyVStack {
+                LazyVStack(spacing: 16) {
                     ForEach(viewModel.villagers, id:\.id) { villager in
                         HStack {
                             VStack(alignment: .leading, spacing: 16) {
                                 Text(villager.name)
+                                    .font(.title)
                                 HStack(spacing: 8) {
                                     Text(villager.personality.rawValue)
                                         .tag(backgroundColor: Color(.systemOrange))
@@ -34,10 +35,12 @@ struct VillagersView: View {
                                 }
                                 Spacer()
                             }
+                            .padding(.leading, 10)
                             Spacer()
                         }
                         .background(Color(.systemYellow))
-                        .padding()
+                        .cornerRadius(12.0)
+                        .padding(.horizontal, 10)
                     }
                 }
                 .background(Color(.systemGreen))
