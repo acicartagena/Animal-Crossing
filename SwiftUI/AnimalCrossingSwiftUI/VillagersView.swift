@@ -18,6 +18,7 @@ struct VillagersView: View {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                         .padding()
+                    Spacer()
                 }
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.villagers, id:\.id) { villager in
@@ -43,8 +44,10 @@ struct VillagersView: View {
                         .padding(.horizontal, 10)
                     }
                 }
+                .padding(.top, 10)
                 .background(Color(.systemGreen))
             }
+            .background(Color(.systemGreen))
             .navigationTitle("Villagers")
         }.onAppear {
             viewModel.fetchVillagers()
