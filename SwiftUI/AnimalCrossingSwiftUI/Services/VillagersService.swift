@@ -4,7 +4,11 @@ import Foundation
 import AnimalCrossingAPI
 import Combine
 
-final class VillagersService {
+protocol VillagersActions {
+    func villagers() -> AnyPublisher<[Villager], AnimalCrossingError>
+}
+
+final class VillagersService: VillagersActions {
 
     private let api: AnimalCrossingAPI
     init(api: AnimalCrossingAPI = AnimalCrossingAPI()) {

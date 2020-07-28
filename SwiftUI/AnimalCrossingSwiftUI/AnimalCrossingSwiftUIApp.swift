@@ -6,7 +6,7 @@ import SwiftUI
 struct AnimalCrossingSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VillagersView()
         }
     }
 }

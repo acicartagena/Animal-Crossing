@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35068D8824CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068D8724CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift */; };
-		35068D8A24CF0892009430A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068D8924CF0892009430A1 /* ContentView.swift */; };
+		35068D8A24CF0892009430A1 /* VillagersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068D8924CF0892009430A1 /* VillagersView.swift */; };
 		35068D8C24CF0892009430A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35068D8B24CF0892009430A1 /* Assets.xcassets */; };
 		35068D8F24CF0892009430A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35068D8E24CF0892009430A1 /* Preview Assets.xcassets */; };
 		35068D9A24CF0893009430A1 /* AnimalCrossingSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068D9924CF0893009430A1 /* AnimalCrossingSwiftUITests.swift */; };
@@ -18,6 +18,7 @@
 		3576C6F224D0295A00FC2B87 /* AnimalCrossingAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 3576C6F124D0295A00FC2B87 /* AnimalCrossingAPI */; };
 		3576C6F424D0297B00FC2B87 /* AnimalCrossingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6F324D0297B00FC2B87 /* AnimalCrossingError.swift */; };
 		3576C6F724D029A900FC2B87 /* Villager+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6F624D029A900FC2B87 /* Villager+Response.swift */; };
+		3576C6F924D03A3A00FC2B87 /* VillagersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6F824D03A3A00FC2B87 /* VillagersViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 /* Begin PBXFileReference section */
 		35068D8424CF0892009430A1 /* AnimalCrossingSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossingSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35068D8724CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCrossingSwiftUIApp.swift; sourceTree = "<group>"; };
-		35068D8924CF0892009430A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		35068D8924CF0892009430A1 /* VillagersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersView.swift; sourceTree = "<group>"; };
 		35068D8B24CF0892009430A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35068D8E24CF0892009430A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35068D9024CF0892009430A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		3576C6EE24D0294000FC2B87 /* VillagersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersService.swift; sourceTree = "<group>"; };
 		3576C6F324D0297B00FC2B87 /* AnimalCrossingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCrossingError.swift; sourceTree = "<group>"; };
 		3576C6F624D029A900FC2B87 /* Villager+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Villager+Response.swift"; sourceTree = "<group>"; };
+		3576C6F824D03A3A00FC2B87 /* VillagersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,8 @@
 				35068D8724CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift */,
 				3576C6ED24D0290F00FC2B87 /* Models */,
 				3576C6F524D0298B00FC2B87 /* Services */,
-				35068D8924CF0892009430A1 /* ContentView.swift */,
+				3576C6F824D03A3A00FC2B87 /* VillagersViewModel.swift */,
+				35068D8924CF0892009430A1 /* VillagersView.swift */,
 				35068D8B24CF0892009430A1 /* Assets.xcassets */,
 				35068D9024CF0892009430A1 /* Info.plist */,
 				35068D8D24CF0892009430A1 /* Preview Content */,
@@ -302,8 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3576C6F924D03A3A00FC2B87 /* VillagersViewModel.swift in Sources */,
 				3576C6F724D029A900FC2B87 /* Villager+Response.swift in Sources */,
-				35068D8A24CF0892009430A1 /* ContentView.swift in Sources */,
+				35068D8A24CF0892009430A1 /* VillagersView.swift in Sources */,
 				35068D8824CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift in Sources */,
 				3576C6F424D0297B00FC2B87 /* AnimalCrossingError.swift in Sources */,
 				3576C6EC24D0272000FC2B87 /* Villager.swift in Sources */,
