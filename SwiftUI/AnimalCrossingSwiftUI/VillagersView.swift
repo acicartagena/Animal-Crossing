@@ -26,8 +26,11 @@ struct VillagersView: View {
                                 Text(villager.name)
                                 HStack(spacing: 8) {
                                     Text(villager.personality.rawValue)
+                                        .tag(backgroundColor: Color(.systemOrange))
                                     Text(villager.gender.rawValue)
+                                        .tag(backgroundColor: Color(.systemPurple))
                                     Text(villager.species.rawValue)
+                                        .tag(backgroundColor: Color(.systemTeal))
                                 }
                                 Spacer()
                             }
