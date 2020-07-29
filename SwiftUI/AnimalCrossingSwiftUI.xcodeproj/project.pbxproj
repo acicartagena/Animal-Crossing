@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03F0130324D1A52F0061CAE5 /* VillagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0130224D1A52F0061CAE5 /* VillagerView.swift */; };
 		35068D8824CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068D8724CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift */; };
 		35068D8A24CF0892009430A1 /* VillagersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068D8924CF0892009430A1 /* VillagersView.swift */; };
 		35068D8C24CF0892009430A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35068D8B24CF0892009430A1 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F0130224D1A52F0061CAE5 /* VillagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagerView.swift; sourceTree = "<group>"; };
 		35068D8424CF0892009430A1 /* AnimalCrossingSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossingSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35068D8724CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCrossingSwiftUIApp.swift; sourceTree = "<group>"; };
 		35068D8924CF0892009430A1 /* VillagersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				3576C6F524D0298B00FC2B87 /* Services */,
 				3576C6F824D03A3A00FC2B87 /* VillagersViewModel.swift */,
 				35068D8924CF0892009430A1 /* VillagersView.swift */,
+				03F0130224D1A52F0061CAE5 /* VillagerView.swift */,
 				3576C6FA24D04A6B00FC2B87 /* TagViewModifier.swift */,
 				35068D8B24CF0892009430A1 /* Assets.xcassets */,
 				35068D9024CF0892009430A1 /* Info.plist */,
@@ -313,6 +316,7 @@
 				35068D8A24CF0892009430A1 /* VillagersView.swift in Sources */,
 				35068D8824CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift in Sources */,
 				3576C6F424D0297B00FC2B87 /* AnimalCrossingError.swift in Sources */,
+				03F0130324D1A52F0061CAE5 /* VillagerView.swift in Sources */,
 				3576C6EC24D0272000FC2B87 /* Villager.swift in Sources */,
 				3576C6FB24D04A6B00FC2B87 /* TagViewModifier.swift in Sources */,
 				3576C6EF24D0294000FC2B87 /* VillagersService.swift in Sources */,

@@ -22,26 +22,12 @@ struct VillagersView: View {
                 }
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.villagers, id:\.id) { villager in
-                        HStack {
-                            VStack(alignment: .leading, spacing: 16) {
-                                Text(villager.name)
-                                    .font(.title)
-                                HStack(spacing: 8) {
-                                    Text(villager.personality.rawValue)
-                                        .tag(backgroundColor: Color(.systemOrange))
-                                    Text(villager.gender.rawValue)
-                                        .tag(backgroundColor: Color(.systemPurple))
-                                    Text(villager.species.rawValue)
-                                        .tag(backgroundColor: Color(.systemTeal))
-                                }
-                                Spacer()
-                            }
-                            .padding(.leading, 10)
-                            Spacer()
-                        }
-                        .background(Color(.systemYellow))
-                        .cornerRadius(12.0)
-                        .padding(.horizontal, 10)
+                        VillagerView(villager: villager)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                            .background(Color(.systemYellow))
+                            .cornerRadius(12.0)
+                            .padding(.horizontal)
                     }
                 }
                 .padding(.top, 10)
