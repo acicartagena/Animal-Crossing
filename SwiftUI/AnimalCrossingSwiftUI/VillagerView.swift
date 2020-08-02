@@ -8,6 +8,11 @@ struct VillagerView: View {
 
     var body: some View {
         HStack {
+            if villager.imageURL != nil {
+                AsyncImage(url: villager.imageURL!)
+                    .frame(width: 80, height: 80)
+                    .clipShape(Circle())
+            }
             VStack(alignment: .leading, spacing: 16) {
                 Text(villager.name)
                     .font(.title)
