@@ -14,12 +14,10 @@ struct VillagerView: View {
                     .clipShape(Circle())
             }
             VStack(alignment: .leading, spacing: 16) {
-                Text(villager.name)
+                Text("\(villager.name) \(villager.gender.display)")
                     .font(.title)
                 HStack(spacing: 8) {
                     Text(villager.personality.rawValue)
-                        .tag(backgroundColor: Color(.systemOrange))
-                    Text(villager.gender.rawValue)
                         .tag(backgroundColor: Color(.systemPurple))
                     Text(villager.species.rawValue)
                         .tag(backgroundColor: Color(.systemTeal))

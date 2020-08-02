@@ -21,6 +21,14 @@ struct Villager: Hashable {
         case male = "Male"
         case female = "Female"
         case unknown
+
+        var display: String {
+            switch self {
+            case .male: return "♂︎"
+            case .female: return "♀︎"
+            case .unknown: return ""
+            }
+        }
     }
 
     enum Species: String, Hashable {
