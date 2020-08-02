@@ -74,3 +74,7 @@ struct Villager: Hashable {
 }
 
 extension Villager: Identifiable { }
+
+extension Villager {
+    static let marshall: Villager = Villager(id: 0, name: "Marshall", personality: .smug, birthday: "Septeber 29", species: .squirrel, gender: .male, catchPhrase: "sulky", imageURL: nil)
+}

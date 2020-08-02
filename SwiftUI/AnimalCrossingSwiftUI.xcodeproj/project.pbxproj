@@ -13,6 +13,7 @@
 		35068D8F24CF0892009430A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35068D8E24CF0892009430A1 /* Preview Assets.xcassets */; };
 		35068D9A24CF0893009430A1 /* AnimalCrossingSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068D9924CF0893009430A1 /* AnimalCrossingSwiftUITests.swift */; };
 		35068DA524CF0893009430A1 /* AnimalCrossingSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35068DA424CF0893009430A1 /* AnimalCrossingSwiftUIUITests.swift */; };
+		3543602A24D6AE24006F0060 /* VillagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543602924D6AE24006F0060 /* VillagerView.swift */; };
 		3576C6EC24D0272000FC2B87 /* Villager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6EB24D0272000FC2B87 /* Villager.swift */; };
 		3576C6EF24D0294000FC2B87 /* VillagersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6EE24D0294000FC2B87 /* VillagersService.swift */; };
 		3576C6F224D0295A00FC2B87 /* AnimalCrossingAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 3576C6F124D0295A00FC2B87 /* AnimalCrossingAPI */; };
@@ -52,6 +53,7 @@
 		35068DA024CF0893009430A1 /* AnimalCrossingSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalCrossingSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35068DA424CF0893009430A1 /* AnimalCrossingSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCrossingSwiftUIUITests.swift; sourceTree = "<group>"; };
 		35068DA624CF0893009430A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3543602924D6AE24006F0060 /* VillagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagerView.swift; sourceTree = "<group>"; };
 		3576C6E824D0239B00FC2B87 /* AnimalCrossingAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AnimalCrossingAPI; path = ../AnimalCrossingAPI; sourceTree = "<group>"; };
 		3576C6EB24D0272000FC2B87 /* Villager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Villager.swift; sourceTree = "<group>"; };
 		3576C6EE24D0294000FC2B87 /* VillagersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersService.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				3576C6F524D0298B00FC2B87 /* Services */,
 				3576C6F824D03A3A00FC2B87 /* VillagersViewModel.swift */,
 				35068D8924CF0892009430A1 /* VillagersView.swift */,
+				3543602924D6AE24006F0060 /* VillagerView.swift */,
 				3576C6FA24D04A6B00FC2B87 /* TagViewModifier.swift */,
 				35068D8B24CF0892009430A1 /* Assets.xcassets */,
 				35068D9024CF0892009430A1 /* Info.plist */,
@@ -313,6 +316,7 @@
 				35068D8A24CF0892009430A1 /* VillagersView.swift in Sources */,
 				35068D8824CF0892009430A1 /* AnimalCrossingSwiftUIApp.swift in Sources */,
 				3576C6F424D0297B00FC2B87 /* AnimalCrossingError.swift in Sources */,
+				3543602A24D6AE24006F0060 /* VillagerView.swift in Sources */,
 				3576C6EC24D0272000FC2B87 /* Villager.swift in Sources */,
 				3576C6FB24D04A6B00FC2B87 /* TagViewModifier.swift in Sources */,
 				3576C6EF24D0294000FC2B87 /* VillagersService.swift in Sources */,
