@@ -19,11 +19,11 @@ struct VillagerView: View {
                     Text(villager.species.rawValue)
                         .tag(backgroundColor: Color(.systemTeal))
                 }
-                Spacer()
             }
             .padding(.leading, 10)
-            Spacer()
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
         .background(Color(.systemYellow))
         .cornerRadius(12.0)
         .padding(.horizontal, 10)
