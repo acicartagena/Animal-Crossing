@@ -25,11 +25,6 @@ struct VillagerView: View {
             }
             .padding(.leading, 10)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
-        .background(Color(.systemYellow))
-        .cornerRadius(12.0)
-        .padding(.horizontal, 10)
     }
 }
 
