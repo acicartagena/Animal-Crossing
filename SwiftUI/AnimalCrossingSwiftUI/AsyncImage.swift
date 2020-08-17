@@ -9,17 +9,18 @@ class ImageLoader: ObservableObject {
     @Published var image: UIImage?
 
     private var cancellable: AnyCancellable?
-    private let url: URL
+    private let url: URL?
 
     deinit {
         cancellable?.cancel()
     }
 
-    init(url: URL) {
+    init(url: URL? = nil) {
         self.url = url
     }
 
     func load() {
+        guard let url = url else { return }
         cancellable = URLSession.shared.dataTaskPublisher(for: url)
                     .map { UIImage(data: $0.data) }
                     .replaceError(with: nil)
@@ -32,14 +33,29 @@ class ImageLoader: ObservableObject {
     }
 }
 
+class TestImageLoader: ImageLoader {
+    private let imageToLoad: UIImage
+    init(image: UIImage) {
+        imageToLoad = image
+        super.init()
+    }
+    override func load() {
+        image = imageToLoad
+    }
+}
+
 struct AsyncImage: View {
 
     @ObservedObject private var loader: ImageLoader
     private let placeholderColor: Color
 
-    init(url: URL, placeholderColor: Color = Color(.systemOrange)) {
-        loader = ImageLoader(url: url)
+    init(loader: ImageLoader, placeholderColor: Color = Color(.systemOrange)) {
+        self.loader = loader
         self.placeholderColor = placeholderColor
+    }
+
+    init(url: URL, placeholderColor: Color = Color(.systemOrange)) {
+        self.init(loader: ImageLoader(url: url), placeholderColor: placeholderColor)
     }
 
     var body: some View {

@@ -22,6 +22,7 @@
 		3576C6F724D029A900FC2B87 /* Villager+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6F624D029A900FC2B87 /* Villager+Response.swift */; };
 		3576C6F924D03A3A00FC2B87 /* VillagersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6F824D03A3A00FC2B87 /* VillagersViewModel.swift */; };
 		3576C6FB24D04A6B00FC2B87 /* TagViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576C6FA24D04A6B00FC2B87 /* TagViewModifier.swift */; };
+		3580CB4124EAC8DF00EA331B /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580CB4024EAC8DF00EA331B /* CardViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3576C6F624D029A900FC2B87 /* Villager+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Villager+Response.swift"; sourceTree = "<group>"; };
 		3576C6F824D03A3A00FC2B87 /* VillagersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersViewModel.swift; sourceTree = "<group>"; };
 		3576C6FA24D04A6B00FC2B87 /* TagViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModifier.swift; sourceTree = "<group>"; };
+		3580CB4024EAC8DF00EA331B /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				35068D8924CF0892009430A1 /* VillagersView.swift */,
 				3543602924D6AE24006F0060 /* VillagerView.swift */,
 				3576C6FA24D04A6B00FC2B87 /* TagViewModifier.swift */,
+				3580CB4024EAC8DF00EA331B /* CardViewModifier.swift */,
 				35068D8B24CF0892009430A1 /* Assets.xcassets */,
 				35068D9024CF0892009430A1 /* Info.plist */,
 				35068D8D24CF0892009430A1 /* Preview Content */,
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3580CB4124EAC8DF00EA331B /* CardViewModifier.swift in Sources */,
 				3543602C24D6C2F4006F0060 /* AsyncImage.swift in Sources */,
 				3576C6F924D03A3A00FC2B87 /* VillagersViewModel.swift in Sources */,
 				3576C6F724D029A900FC2B87 /* Villager+Response.swift in Sources */,

@@ -31,5 +31,6 @@ struct VillagerView: View {
 struct VillagerView_Previews: PreviewProvider {
     static var previews: some View {
         VillagerView(villager: Villager.marshall)
+            .cardView()
     }
 }
