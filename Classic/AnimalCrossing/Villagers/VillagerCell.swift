@@ -13,11 +13,7 @@ class VillagerCell: UICollectionViewCell {
     }()
 
     private let nameLabel = Label()
-    private let personalityLabel = Label()
-    private let birthdayLabel = Label()
     private let descriptionLabel = Label()
-    private let genderLabel = Label()
-    private let catchPhraseLabel = Label()
     private let imageView = UIImageView()
 
     override init(frame: CGRect) {
@@ -65,9 +61,7 @@ class VillagerCell: UICollectionViewCell {
 
     func configure(with villager: Villager) {
         nameLabel.text = villager.name
-        birthdayLabel.text = ""
         descriptionLabel.text = "\(villager.personality) \(villager.gender) \(villager.species)"
-        catchPhraseLabel.text = villager.catchPhrase
 
         imageView.setImage(villager.imageURL)
     }

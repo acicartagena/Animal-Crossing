@@ -55,6 +55,14 @@ class VillagersViewController: UIViewController {
         collectionView.bottomAnchor.constraint(to: view.bottomAnchor)
     }
 
+    func setupBindings() {
+        viewModel.snapshots.sink { [weak self] snapshot in
+            self?.dataSource.apply(snapshot)
+        }.store(in: &subscriptions)
+    }
+}
+
+extension VillagersViewController {
     func makeCollectionViewLayout() -> UICollectionViewLayout {
         let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .estimated(100.0))
@@ -66,11 +74,5 @@ class VillagersViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
-    }
-
-    func setupBindings() {
-        viewModel.snapshots.sink { [weak self] snapshot in
-            self?.dataSource.apply(snapshot)
-        }.store(in: &subscriptions)
     }
 }
